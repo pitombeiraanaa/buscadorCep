@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Buscar Dados de um CEP</h1>
+
+    <form>
+      <div class="topo">
+        <input
+          type="text"
+          id="cep"
+          placeholder="Digite o seu cep"
+          maxlength="9"
+        />
+        <button onclick="buscarDadosCep(event)">Buscar CEP</button>
+      </div>
+      <div class="dados">
+        <div class="form-group">
+          <label for="logradouro">Logradouro</label>
+          <input id="logradouro" type="text" disabled />
+        </div>
+
+        <div class="form-group">
+          <label for="complemento">Complemento</label>
+          <input id="complemento" type="text" disabled />
+        </div>
+
+        <div class="form-group">
+          <label for="bairro">Bairro</label>
+          <input id="bairro" type="text" disabled />
+        </div>
+
+        <div class="form-group">
+          <label for="localidade">Cidade</label>
+          <input id="localidade" type="text" disabled />
+        </div>
+
+        <div class="form-group">
+          <label for="uf">Estado</label>
+          <input id="uf" type="text" disabled />
+        </div>
+      </div>
+    </form>
+
+    <div id="loading" class="loading">
+      <span class="loader"></span>
+    </div>
+  </body>
+</html>
